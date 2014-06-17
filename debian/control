@@ -1,0 +1,15 @@
+Source: inspireme
+Section:kde 
+Priority: extra
+Maintainer: ajay nair <ajaynair59@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage:
+#Vcs-Git: git://git.debian.org/collab-maint/inspireme.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/inspireme.git;a=summary
+
+Package: inspireme
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, cowsay
+Description: This is a trial package 
+ A trial package

@@ -1,0 +1,19 @@
+filename='/usr/bin/inspireme_db'
+quote=''
+end='----e'
+count=$(grep -c "\-\-\-\-e" $filename)
+printQuote=$((RANDOM%count))
+quoteNo=0
+cat $filename | while read line 
+do
+	if [ "$line" = "$end" ];then
+		if [ "$quoteNo" = "$printQuote" ];then
+			cowsay -f tux $quote			
+			break
+		fi
+		quote=''
+		quoteNo=$((quoteNo+1))
+	else
+		quote=$quote$line
+	fi 
+done
